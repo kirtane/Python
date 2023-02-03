@@ -168,6 +168,23 @@ while bvalue <= avalue:
               print(f"It is Odd number = {bvalue}")     # here all value get printed in ascending order
        bvalue = bvalue + 1
 #-----------------------------------------------------------------------------------------------------
+#         ASSIGNMENT                                    DATE : 1/2/2023
+string = "i7n3no8va9nt4"
+liststring = list(string)
+lower = 0
+upper = len(string)-1
+while lower<upper:
+        if not liststring[lower].isalpha():
+                lower+=1
+        elif not liststring[upper].isalpha():
+                upper-=1
+        else:
+                liststring[lower],liststring[upper] = liststring[upper],liststring[lower]
+                lower+=1
+                upper-=1
+strop=' '.join(liststring)
+print(strop)
 
+print("hello")
 
 
