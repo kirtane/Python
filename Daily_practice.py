@@ -633,10 +633,52 @@ while lower<upper:
         lower+=1
         upper-=1
 print(alist)
-#--------------------------------------------------------------------------------------------
-# FILE I/O
+#============================================================================================================
+#                                              FILE READ AND WRITE
+## File reading operation
 
-#FILE READING OPERATION 
+# Go to file path or folder and locate file with file name
+# Open file
+# Read content of file
+# copy content you got from file and use it
+# file close
+
+with open(r"E:\Innovant IT\python\INT01\Sample.txt",'r') as filevariable:
+        filecontent = filevariable.read()
+        print(filecontent)
+# file will automatically closed with or without exception
+#--------------------------------------------------------------------------------------------------------
+
+## File writing operation
+
+# Go to file path or folder and locate file with file name
+# Open file
+# write content in file
+# Save file if you made changes (only when you madhe write something in file)
+# file close
+
+with open(r"E:\Innovant IT\python\INT01\Sample.txt",'w') as filevariable:  #here "w" is used to write
+        filevariable.write("We are now expert in python...")
+        print("File writing completed...")
+#file will automatically closed with or without exception
+
+
+with open(r"E:\Innovant IT\python\INT01\Sample.txt",'a') as filevariable:  #here "a" is used for append
+    filevariable.write("We are now expert in python...")
+    print("File writing completed...")
+#file will automatically closed with or without exception
+#---------------------------------------------------------------------------------------------------------------
+#ASSIGNMENT
+## need to open file in read + write mode..
+
+with open(r"E:\Innovant IT\python\INT01\Sample.txt", 'r+') as filevariable:  #here "a" is used for append
+        filecontent = filevariable.read()
+        print(filecontent)
+        filevariable.write("\n i am best python developer...")
+        print("File writing completed...")
+        
+
+
 #---------------------------------------------------------------------------
 
 string = "i7n3no8va9nt4"
