@@ -633,6 +633,24 @@ while lower<upper:
         lower+=1
         upper-=1
 print(alist)
+#--------------------------------------------------------------------------------
+string = "i7n3no8va9nt4"
+liststring = list(string)
+lower = 0
+upper = len(string)-1
+while lower<upper:
+        if not liststring[lower].isalpha():
+                lower+=1
+        elif not liststring[upper].isalpha():
+                upper-=1
+        else:
+                liststring[lower],liststring[upper] = liststring[upper],liststring[lower]
+                lower+=1
+                upper-=1
+strop=' '.join(liststring)
+print(strop)
+
+print("hello")
 #============================================================================================================
 #                                              FILE READ AND WRITE
 ## File reading operation
@@ -681,23 +699,7 @@ with open(r"E:\Innovant IT\python\INT01\Sample.txt", 'r+') as filevariable:  #he
 
 #---------------------------------------------------------------------------
 
-string = "i7n3no8va9nt4"
-liststring = list(string)
-lower = 0
-upper = len(string)-1
-while lower<upper:
-        if not liststring[lower].isalpha():
-                lower+=1
-        elif not liststring[upper].isalpha():
-                upper-=1
-        else:
-                liststring[lower],liststring[upper] = liststring[upper],liststring[lower]
-                lower+=1
-                upper-=1
-strop=' '.join(liststring)
-print(strop)
 
-print("hello")
 
 
 

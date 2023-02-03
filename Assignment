@@ -169,6 +169,13 @@ while bvalue <= avalue:
        bvalue = bvalue + 1
 #-----------------------------------------------------------------------------------------------------
 #         ASSIGNMENT                                    DATE : 1/2/2023
+## Interview program recently asked 4 days back
+#string = "i7n3no8va9nt"
+#reverse string by using while loop 
+## digit position should not get changed.. without changing digit location only reverse character inside string 
+## string = "t7n3av8on9ni"
+## if digit then increment or decrement counter
+## swap only if both are char and not digit
 string = "i7n3no8va9nt4"
 liststring = list(string)
 lower = 0
