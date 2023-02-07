@@ -694,11 +694,57 @@ with open(r"E:\Innovant IT\python\INT01\Sample.txt", 'r+') as filevariable:  #he
         print(filecontent)
         filevariable.write("\n i am best python developer...")
         print("File writing completed...")
-        
-
-
 #---------------------------------------------------------------------------
+class BillingCustomer:
+    billId = 000        # class attribute
+    address = 'Pune'    # class attribute
+    billAmount = 0      # class attribute
 
+    def __init__(self) -> None:     #self : a class object which is being created
+            self.billId = 111                       # Object attribute
+            self.billAmount = 100                   # Object attribute
+            self.isCorrectionRequired = False       # Object attribute
+            print("I am constructor of BillingCustomer")
+
+    #Automatically get execute when new object getting created and same object will be passed as arguement to self
+    # init(self,someotherAttribute) having morethan one parameter along with self is a parameterized constructor
+    def __init__(self, id, amount,correction) -> None:     #self : a class object which is being created
+        self.billId = id                       # Object attribute
+        self.billAmount = amount                   # Object attribute
+        self.isCorrectionRequired = correction       # Object attribute
+        print("I am constructor of BillingCustomer")
+    
+    def correctionRequired(self):
+        return self.isCorrectionRequired
+
+    def getBillingDetails(self):        # method
+        return f"Bill ID : {self.billId}, Address :  {self.address}, Bill Amount : {self.billAmount}"
+
+###billObj = BillingCustomer()    #__init__()     ## Object creation
+##TypeError: BillingCustomer.__init__() missing 3 required positional arguments: 'id', 'amount', and 'correction' ##
+
+billObj = BillingCustomer(111, 200, True)    #__init__()     ## Object creation
+info = billObj.getBillingDetails()  
+print(info) #Bill ID : 111, Address :  Pune, Bill Amount : 200
+
+billObj2 = BillingCustomer(222, 1000, True)    #__init__()     ## Object creation
+info = billObj2.getBillingDetails()  
+print(info) #Bill ID : 111, Address :  Pune, Bill Amount : 200
+#----------------------------------------------------------------------------------------------------
+#addition of two numbres using parameterized constructor
+
+class Addition:
+        a = 10
+        b = 20
+        def __init__(self, c_value, d_value) -> None:
+                self.a = c_value
+                self.b = d_value
+        def getaddition(self):
+                result = self.a + self.b
+                return f"a = {self.a}, b  = {self.b}, addition = {result}"
+addobj = Addition(50,100)
+value = addobj.getaddition()
+print(value)
 
 
 
