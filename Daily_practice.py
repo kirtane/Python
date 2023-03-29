@@ -479,6 +479,14 @@ print(result)                        #o/p returns none
 #2. for loop
 #--------------------------------------------------------------
 # WHILE LOOP:
+i=0     # here i ia any variable ia equal to start no. from 
+while(i<100):   # here we give condition range
+        print(i)  # it will print 0 to i-1
+        # i += 1
+        i=i+1
+
+
+
 print("hello priya")
 print("hello priya")
 print("hello priya")
@@ -516,9 +524,12 @@ avalue= input("enter the number you wants to display =")
 print(avalue)
 #==========================================================================================================
 #                                      FOR LOOP
+for i in range (0,100):   #syntax of for loop i is any variable in range of (0, n-1), here (0,100)
+     print(i)             # here it print 0 to 99. because n-1. if you want 100 so give (0,101)
+#-----------------------------------------------------------------------------------------------------
 
 alist = [10,45,30,60,25,55,20]
-for item in alist:              # here alist muct me define variable, and item is any tem variable. instade of item we can use any thing
+for item in alist:    # here alist muct me define variable, and item is any variable. instade of item we can use any thing
         print(item)
 
 for item in alist:

@@ -90,6 +90,7 @@
 # print("addition of two no. is : " , result)'''
 # #============================================================================================================
 # #                                    TYPE:
+#data type specify types of values.
 # a = 10         # Integer   # 10 is value in variable and it is type of Integer so varible will be of smae type; Integer
 # print(a)
 
@@ -126,6 +127,8 @@
 # temp = 0.0
 # print(type(temp))        # float 
 # print(temp)              # 0.0
+
+#a ="12"
 # #================================================================================================================
 
 # #                                  EXTERNAL MODULE
@@ -148,27 +151,27 @@
 # # input function is used to get input from user 
 # # input function always accept input values as string
 
-# '''name = input("what is your name =")  
-# print("hello"+ name)'''
+name = input("what is your name =")
+print("hello"+ name)
 
-# '''old_age = input("enter your old age")
+# old_age = input("enter your old age")
 # #after 2 year what is the age
 # new_age = old_age + 2
-# print(new_age)'''          # here it will give error because input is always string 
-#                         # so string and int never get add, so we have to convert str into int call type casting
+# print(new_age)          # here it will give error because input is always string 
+                        # so string and int never get add, so we have to convert str into int call type casting
 # ## type casting used to convert given varibale type into expected variable type
 # #int(), float(), str(), bool(), ets are typecasting syntax
 # # so here given value is string so for addition we have to convert it into int
 
-# '''old_age = int(input("enter your old age "))
+# old_age = int(input("enter your old age "))
 # #after 2 year what is the age
 # new_age = old_age + 2
-# print("after 2 years your age will be :", new_age)'''
+# print("after 2 years your age will be :", new_age)
 
-# '''first = int(input("enter 1st no: "))    # here in initial stage we convert str into int
-# second = int(input("enter 2nd no: "))
+# first = eval(input("enter 1st no: "))    # here in initial stage we convert str into int
+# second = eval(input("enter 2nd no: "))
 # sum = first + second
-# print(f"addition of two no is: {sum}")'''
+# print(f"addition of two no is: {sum}")
 # #====================================================================================================
 
 # #                                  # Arithmatic operators
@@ -201,9 +204,12 @@
 # # b = 20
 # # print("a == b ", a == b) #a == b = False it give o/p in boolean. comparision operator
 # ##---------------------------------------------------------
-# # a = 20
-# # b = 20
-# # print("a == b ", a == b) #a == b = True
+# a = 20
+# b = 20
+# print("a == b ", a == b) #a == b = True
+# a+=b      # it  equals to a=a+b
+# print(a)
+
 # ##---------------------------------------------------------
 # #a = 10
 # #b = 20
@@ -238,6 +244,10 @@
 # # a = 30
 # # b = 20
 # # print("a < b ", a < b) #a < b  = False
+
+
+#a = 2**4
+
 # ##=================================================================
 
 # ## Logical Operators
@@ -297,6 +307,22 @@
 # # #####print("a not", a not )    # wrong in syntax to use not
 # # print("a not", not a)    # a not False 
 # # print("b not", not b)    # a not True
+
+# Que?
+#What is the o/p of following ?
+
+s1 = {1,2,3,4}
+#s1 = False
+s2 = {4,5,6,7}
+print(s1 & s2)           # The o/p is {4}. and operator will get common item 
+print(s1 or s2)          # the o/p is {1, 2, 3, 4}
+#print(s1 and s2)         # the o/p is {4, 5, 6, 7}
+
+a = 20
+b = 10
+print(a and b)
+
+
 # #==========================================================================================================
 
 # # VVVVVVV IMP  ASSIGNMNET 
@@ -336,7 +362,7 @@
 # print(avalue[:])                 # here we dont pass any index it will take default index 0
 #---------------------------------------------------------------------------------
 
-avalue = "Welcome"
+#avalue = "Welcome"
 # print(avalue[0:7])                 # o/p is welcome
 # print(avalue[0:7:1])               # o/p is welcome
 # print(avalue[0:7:2])               # o/p is wloe. alternate words will print
@@ -344,14 +370,180 @@ avalue = "Welcome"
 #=================================================================================================
 #                               ASIGNMENT TO REVERSE STRING
 
-string = "Hello \n \t how are you doing?"
-strlen = len(string)                   # here it store the length of given string
-#print(strlen)
-for item in string:
-    print(strlen)                       # here we simply print length of string to understand
-    print(string[strlen-1])             # here we get last index of string and simply print it
-    strlen -=1                          # here we drcrese the counter of strlen 
+# string = "Hello \n \t how are you doing?"
+# strlen = len(string)                   # here it store the length of given string
+# #print(strlen)
+# for item in string:
+#     #print(strlen)                       # here we simply print length of string to understand
+#     print(string[strlen-1])             # here we get last index of string and simply print it
+#     strlen -=1                          # here we drcrese the counter of strlen 
 #===================================================================================================================
 
-#
+#                                 STRING FUNCTIONS
+
+# Python has inbuilt method that we can use on string operations
+# All string methods returns new values they do not change original string
+#------------------------------------------------------------------------------------
+# 1) len function : is common in all to find length of unknown string
+
+# avalue = "Welcome"
+#print(f"the lenghth of string is: {len(avalue)}")
+#------------------------------------------------------------------------------------
+
+#2) startswhith Function: 
+
+
+# result = avalue.startswith('W')         # here o/p is true (bool) it check string start with W or not
+# print(f"{avalue} startwith : {result}")
+
+# result = avalue.startswith('w')         # here o/p is false (bool). here we pass w. so it is case sensitive
+# print(f"{avalue} startwith : {result}")
+#------------------------------------------------------------------------------------------------
+
+#3)Endswith function: 
+
+# result = avalue.endswith('e')
+# print(f"{avalue} endwith : {result}")   ## here o/p is true (bool) it check string start with e or not
+
+# result = avalue.endswith('E')         # here o/p is false (bool). here we pass E. so it is case sensitive
+# print(f"{avalue} endwith : {result}")
+#------------------------------------------------------------------------------------------------------
+
+#4) capitlization: it will capital only 1st letter
+
+# result = avalue.capitalize()
+# print(f"{avalue} Capitalization: {result}")
+#-----------------------------------------------------------------------------------------------------
+
+#5) Upper function : it will write string in upper case
+
+# result = avalue.upper()
+# print(f"{avalue} In Upper case : {result}")
+#------------------------------------------------------------------------------------------------------
+
+#6) Lower function : it will write string in lower case
+
+# result= avalue.lower()
+# print(f"{avalue} in lower case : {result}")
+#----------------------------------------------------------------------------------------------------
+
+# 7) Find Function :
+
+# avalue = "welcome"
+# result = avalue.find('co')
+# print(f"the index of co is : {result}")    # here index of 'co' is 3
+
+# result = avalue.find('Co')
+# print(f"the index of co is : {result}")    # here we pass capital "Co" so it show index as -1
+
+# result = avalue.find('co',2)   # here we can pass 2 as satrting index from where we have to search string
+# # it is useful when we know tentative where that search will find so its easy to check to reduse time to find
+# print(f"index of co is : {result}")
+
+# result = avalue.find("l", 2,4)  # here we pass staring index and ending index as 2 and 4 
+# print(f"index of l is : {result}")
+
+# result = avalue.find('e', 2)   # o/p is 6. 
+# print(f"index if e in : {result}")
+#====================================================================================================================
+
+#                                   LIST
+
+# List are used to store multiple items in single variable
+# list are built-in data type of python
+# List are created using square brackets and seperated by ','.
+
+# avalue = ['Priya', 'ishu', 'sagar', 'sanvi']
+# print(avalue)
+
+# print(avalue[0])
+# print(avalue[0:3])
+# print(avalue[0:5])
+# print(avalue[1:3])
+#======================================================================================================
+
+
+# temp = 'welcome'
+# new = [] 
+# for item in temp:
+#     if item in 'aeiou':
+#        new.append(item)
+# print(new)
+# #-------------------------------------------------------------------------------------------------------------
+
+# new1 = list(filter(lambda item : item in 'aeiou',temp))
+# print(new1)
+#========================================================================================================
+
+
+
+
+atemp = ['hello', 'how', 'when', 'who']
+
+# new1 = list(map(lambda item : item.upper() ,atemp))
+# print(new1)
+
+#==================================================================
+
+# atemp = ['hello', 'how', 'when', 'who']
+
+# item = 0
+# while item < len(atemp):
+#     atemp[item]= atemp[item].upper()
+#     item += 1
+# print(atemp)
+#=====================================================================
+
+for item in atemp:
+    atemp[atemp.index(item)]= item.upper()
+print(atemp)
+
+
+numlist = [10, 4, 3, 5, 9, 22]
+result=0
+for item in numlist:
+    result = result +item
+print()
+
+numlist = [10, 4, 3, 5, 9, 22]
+print(numlist.__str__())
+
+
+
+
+
+#for item in atemp:
+
+
+    # str(atemp).upper
+    # atemp = item.upper()
+    # atemp.
+
+    # item+=item
+#print(atemp)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
